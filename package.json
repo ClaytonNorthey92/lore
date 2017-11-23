@@ -1,0 +1,23 @@
+{
+  "name": "lore",
+  "version": "1.0.0",
+  "description": "Datalake API using MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaytonNorthey92/lore.git"
+  },
+  "author": "Clayton Northey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaytonNorthey92/lore/issues"
+  },
+  "homepage": "https://github.com/ClaytonNorthey92/lore#readme",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "mongoose": "^4.13.4"
+  }
+}
