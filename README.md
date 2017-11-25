@@ -18,10 +18,15 @@ docker-compose up --build
 ### Configure consumers
 Consumers are those programs that use **Lore**.  You can conigure key --> consumer name mappings in the `./models/config.js` file.
 
-*NOTE: Do NOT expose these keys to users.*
+*NOTE: Do NOT expose these keys to users.  These identify which of your programs saved which events.*
 
 ### Create an event
 #### POST /events
+
+Parameters:
+- consumer (String) - the key that identifies which program saved the event
+- name (String) - the name of the event
+- data (Object) - the data to be saved with the event
 ```
 {
 	"consumer": "default",
