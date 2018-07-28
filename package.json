@@ -17,12 +17,17 @@
   },
   "homepage": "https://github.com/ClaytonNorthey92/lore#readme",
   "dependencies": {
+    "@types/mongoose": "5.2.2",
+    "@types/reflect-metadata": "0.1.0",
     "hapi": "17.5.2",
     "mocha": "5.2.0",
     "mocha-typescript": "^1.1.17",
-    "mongoose": "5.2.4"
+    "mongoose": "5.2.5",
+    "reflect-metadata": "0.1.12",
+    "typegoose": "^5.2.1"
   },
   "devDependencies": {
-    "assert": "^1.4.1"
+    "assert": "^1.4.1",
+    "babel-preset-env": "^1.7.0"
   }
 }

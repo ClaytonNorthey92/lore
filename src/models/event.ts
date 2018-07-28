@@ -1,35 +1,15 @@
-import { Schema, model as Model, next, Document } from 'mongoose';
+import { prop, Typegoose, InstanceType } from 'typegoose'; 
 
-export interface IEvent {
-    name: string;
-    data: any;
-};
+class Event extends Typegoose {
+    @prop({required: true})
+    public name: string;
 
-const EventSchema: Schema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        required: true,
-        default: Date.now
-    },
-    data: {
-        type: Schema.Types.Mixed,
-        required: true
-    }
-});
+    @prop({required: true})
+    public data: any;
 
-const EventModel: Model = Model('Event', EventSchema);
-
-export default class Event {
-    public readonly document: Model;
-    
-    constructor(params: IEvent) {
-        this.document = new EventModel(params);
-    }
+    @prop({required: true, default: Date.now})
+    private createdAt: Date;
 }
 
-
-
+export type EventModel = InstanceType<Event>;
+export default new Event().getModelForClass(Event);
