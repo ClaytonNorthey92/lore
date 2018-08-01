@@ -1,6 +1,5 @@
 import * as mongoose from 'mongoose';
 
-@suite
 export default abstract class BaseTestSuite {
     
     // TODO - how do you roll this back?
